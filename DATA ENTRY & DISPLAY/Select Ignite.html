@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejemplo</title>
+        <style>
+            /* select starting stylings ------------------------------*/
+            .select {
+                font-family: 'Roboto','Helvetica','Arial',sans-serif;
+                width: 350px;
+                position: relative;
+            }
+
+            .select-text {
+                /*background: #9933ff;*/
+                width: 350px;
+                height: 32px;
+                font-size: 18px;
+                border: none;
+                border-bottom: 1px solid rgba(0,0,0, 0.12);
+            }
+
+            /* Remove focus */
+            .select-text:hover {
+                border-bottom: black 2px solid;
+            }
+            .select-text:focus {
+                outline: none;
+                border-bottom:  #2F80ED 2px solid;
+            }
+                
+            /*Desactiva la flecha hacia abajo*/
+            .select .select-text {
+                appearance: none;
+                -webkit-appearance:none
+            }
+
+            .select:after {
+                position: absolute;
+                top: 14px;
+                right: 10px;
+                /* Styling the down arrow */
+                content: '';
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid rgba(0, 0, 0, 0.5);
+            }
+
+
+            /* LABEL ======================================= */
+            .select-label {
+                color: rgba(0,0,0, 0.26);
+                font-size: 18px;
+                position: absolute;
+                top: 5px;
+                transition: 0.2s ease all;
+            }
+
+            /* active state */
+            .select-text:focus ~ .select-label,
+            .select-text:valid ~ .select-label {
+                color: #2F80ED;
+                top: -11px;
+                transition: 0.2s ease all;
+                font-size: 14px;
+            }
+    </style>
+    </head>
+    <body>
+        <div style="margin-top: 100px; margin-left: 100px;">
+            <div class="select">
+                <select class="select-text">
+                    <option value="" disabled selected></option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label class="select-label">Select</label>
+             </div>
+        </div>
+    </body>
+</html>

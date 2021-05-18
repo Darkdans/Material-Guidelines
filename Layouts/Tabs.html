@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Tabs</title>
+		<style>
+			body {
+			  display: flex;
+			}
+			.tab-bar {
+			  margin: 30px auto;
+			  display: flex;
+			  -webkit-padding-start: 0;
+			  box-shadow: 0 3px 0px rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.24);
+			}
+			.tab {
+			  width: 150px;
+			  padding: 20px 0;
+			  color: rgba(0, 0, 0, 0.62);
+			  overflow: hidden;
+			  text-align: center;
+			  cursor: pointer;
+			  position: relative;
+			  user-select: none;
+			}
+			.indicator {
+			  width: 150px;
+			  height: 3px;
+                          list-style:none;
+			  background: #2196F3;
+			  position: absolute;
+			  margin-top: 58px;
+			  margin-left:0;	  
+			  -webkit-transition: margin 0.5s ease;
+			  transition: margin 0.5s ease;
+			}
+		</style>
+		
+        <body>
+            <ul class="tab-bar">
+                    <li data-num="1" class="tab wave">TAB 1</li>
+                    <li data-num="2" class="tab wave">TAB 2</li>
+                    <li data-num="3" class="tab wave">TAB 3</li>
+                    <li data-num="4" class="tab wave">TAB 4</li>
+                    <li data-num="5" class="tab wave">TAB 5</li>
+                    <li class="indicator"></li>
+            </ul>
+        </body>
+        <script>
+            var waveBtn = (function () {
+                var btn = document.querySelectorAll('.wave'),
+                indicator = document.querySelector('.indicator'),
+                indi = 0;
+                indicator.style.marginLeft = indi + 'px';
+
+                for(var i = 0; i < btn.length; i++) {
+                    btn[i].onmousedown = function (e) {
+                    indicator.style.marginLeft = indi + (this.dataset.num-1) * 150 + 'px';
+                };
+              }
+            }());
+        </script>
+    </head>
+</html>

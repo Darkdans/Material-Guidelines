@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<style>  
+	.formulario__label {
+		width: 8px;
+		font-size: 1rem;	 
+	    margin-left: 15px;
+	    position: absolute;
+	    margin-top: -80px;
+	    transition: all 0.2s;
+	    z-index: -20;
+	    color: dimgray;
+	}	
+	.formulario__input {
+	  width: 100%;
+	 
+	  padding-top: 8px;
+	  padding-bottom: 8px;
+	  padding: 20px;
+	  background: rgba(255, 255, 255, 0.1);
+	  border:none;
+	  margin-bottom: 40px;
+	  text-align: left;
+	 
+	  font-family: "Titillium Web", sans-serif, Verdana, Arial, Helvetica;
+	  border: 1.5px solid lightgray;
+	  border-radius: 4px;
+	}
+	.formulario__input:hover {
+	  border: 1.6px solid black;
+	   border-radius: 4px;
+	}
+ 
+	.formulario__input:focus {
+	  outline: none;
+	  border-style: solid;
+	  border-radius: 4px;
+      border-color: #004691;;
+	}
+	.formulario__input:focus + .formulario__label{
+    margin-top: -104px;
+    font-size: 10px;
+    background: white;
+    z-index: 0;
+    width: auto;
+	color:#004691;;
+	}
+
+	.fijar {
+	  margin-top: -111px!important;
+	}
+	 
+	</style>
+</head>
+ 
+<body>
+ 
+<script>
+var inputs = document.getElementsByClassName('formulario__input');
+inputs.onclick() = function() {
+     for (var i = 0; i < inputs.length; i++) {
+	  inputs[i].addEventListener('keyup', function(){
+		if(this.value.length>=1) {
+		  this.nextElementSibling.classList.add('fijar');
+		} else {
+		  this.nextElementSibling.classList.remove('fijar');
+		}
+	  });
+	}
+}
+	
+
+
+</script>
+  <form action="" class="formulario">
+  <input type="text" class="formulario__input">
+  <label for="" class="formulario__label ">Nombre</label>
+</form>
+
+</body>
+</html> 

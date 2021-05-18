@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Ejemplo</title>
+        <link herf="StyleSheet.css" rel="stylesheet"/>
+        <style>
+        .textBoxContainer{
+            position: relative;
+            text-align: left;
+            width: 400px;
+            height: 50px;
+            margin-top: 8%;
+        }
+        .materialTextBox{
+            height: 35px;
+            text-align: left;
+            width: 100%;
+            font-family: Arial, Helevetica, Sans-serif;
+            font-size: 100%;
+            border: none;
+            outline: none;
+            background-color: lightgray;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom:1.5px solid lightgray;
+            padding-left: 8px;
+            padding-top: 5px;
+        
+        }
+        
+        .materialTextBox + label{
+            color:dimgray;
+            display: inline-block;
+            position:absolute;
+            top: 10px;
+            margin-left: 10px;
+            font-family: Arial, Helevetica, sans-serif;
+            font-size: 100%;
+            cursor: text;
+            /*Para que al hacer clic, el texto de la etiqueta cambie de color*/
+        }
+        
+       .materialTextBox:focus + label {
+            color: #6200ee;
+            display: inline-block;
+            position: absolute;
+            top: 2%;
+            margin-left: 8px;
+            font-family: Arial, Helevetica, sans-serif;
+            font-size: 80%;
+            transition: all 0.3s ease;
+        } 
+        .materilTextBox:valid:not(:focus) + label{
+            /*color: dimgray;*/
+            color: #e41c77;
+            display: inline-block;
+            position: absolute;
+            top: 2%;
+            margin-left: 8px;
+            font-family: Arial, Helevetica, sans-serif;
+            font-size: 80%;
+            transition: all 0.3s ease;
+        }
+        .materialTextBox:valid:not(:focus){
+            border-bottom: 1.5px solid #6200ee;
+        }
+        
+        .materialTextBox:focus, materialTextBox:valid{
+            border-bottom-color: #6200ee;
+            transition: all 0.3s ease;
+        } /*Pone la linea morada al hacer clic*/
+        .materialTextBox:hover:not(:focus){
+            border-bottom-color: #212121;
+            transition: all 0.3s ease;
+        }
+    </style>
+        <body>
+            <div class="textBoxContainer">
+                <input type="text" class="materialTextBox" id="materialTextBox" required/>
+                <label for= materialTextBox>Texto</label>
+            </div>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <style>
+            .material-icons{
+                display: block;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component {
+                background: #FFFFFF;
+                width: 100%;
+                border: 1px solid #d1d1d1;
+                border-radius: .3em;
+                box-shadow: 0 1px 2px #d1d1d1;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component input {
+                display: none;
+                visibility: hidden;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component label.expansion-panel-title {
+                display: block;
+                text-indent: 56px;
+                border-bottom: 1px solid #CCC;
+                font-weight: 900;
+                height: 32px;    
+                font-size: 1.5rem;
+                padding: 16px;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component label.expansion-panel-title:hover {
+                background: #0000000a;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component label.expansion-collapse-icon::before {
+                content: "keyboard_arrow_down";
+                height: 32px;
+                width: 32px;
+                padding: 16px;
+                line-height: 32px;
+                text-align: center;
+                position: absolute;
+                margin-top: -65px;
+                font-size: 28px;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component .container-expansion {
+                height: 0px;
+                overflow: hidden;
+                transition: height 0.5s;
+                background: white;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component div.section {
+                padding: 0 20px;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component input.toggle-expansion:checked ~ .container-expansion {
+                height: 250px;
+            }
+            .grid-container.grid-floating-active .expansion-panel-component input.toggle-expansion:checked ~ label.expansion-collapse-icon.material-icons::before {
+                content: "keyboard_arrow_up";
+                display: block!important;
+                margin-top: -65px;
+                background: transparent;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container grid-floating-active">
+            <div class="grid-x">
+                <div class="cell">
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x" id="mainDiv">
+                            
+                            <div class="cell small-12">
+                                <div class="expansion-panel-component">
+                                    <input id="toggle-seccion-opcion" class="toggle-expansion" type="checkbox" checked>
+                                    <label class="expansion-panel-title" for="toggle-seccion-opcion">CSS Expand/Collapse Section</label>
+                                    <label class="expansion-collapse-icon material-icons"></label>
+                                    <div class="container-expansion">
+                                        <div class="section">
+                                            <p>Hummingbirds are birds native to the Americas that constitute the 
+                                                family Trochilidae. They are among the smallest of birds, most
+                                                species measuring 7.5–13 cm (3–5 in) in length. Indeed, the 
+                                                smallest extant bird species is a hummingbird, the 5 cm (2.0 in)
+                                                bee hummingbird weighing less than 2.0 g (0.07 oz).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell small-12">
+                                <div class="expansion-panel-component">
+                                    <input id="toggle-seccion-opcion2" class="toggle-expansion" type="checkbox" checked>
+                                    <label class="expansion-panel-title" for="toggle-seccion-opcion2">CSS Expand/Collapse Section</label>
+                                    <label class="expansion-collapse-icon material-icons"></label>
+                                    <div class="container-expansion">
+                                        <div class="section">
+                                            <p>Hummingbirds are birds native to the Americas that constitute the 
+                                                family Trochilidae. They are among the smallest of birds, most
+                                                species measuring 7.5–13 cm (3–5 in) in length. Indeed, the 
+                                                smallest extant bird species is a hummingbird, the 5 cm (2.0 in)
+                                                bee hummingbird weighing less than 2.0 g (0.07 oz).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+                       
+
+						

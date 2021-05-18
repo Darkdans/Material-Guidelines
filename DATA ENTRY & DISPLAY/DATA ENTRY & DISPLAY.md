@@ -1,9 +1,6 @@
-# Material-Guidelines
-
-Tabs with ripple and material design style: https://codepen.io/Darkdans21/pen/jjGYaG
-
+# Material-Guidelines 
+DATA ENTRY & DISPLAY
 Componentes de Material Design (JS y CSS)
-Checar https://codepen.io/Kapilnemo/pen/PXEEPo
  
 Para agregar imagenes o Gifs tienes que usar imgur o giphy, despues usas el siguiente codigo si es .gif y si no html para subir tu markdown
 
